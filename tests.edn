@@ -1,0 +1,14 @@
+#kaocha/v1
+ {:capture-output? true
+  :color?          true
+  :fail-fast?      false
+  :plugins         [;:kaocha.plugin/print-invocations
+                    ;:kaocha.plugin/randomize
+                    ;:kaocha.plugin/profiling
+                    :kaocha.plugin/filter]
+  :reporter        kaocha.report/documentation 
+  :tests           [{:id           :e5-assmt2
+                     :ns-patterns  ["-test$" "-spec$"]
+                     :source-paths ["src"]
+                     :test-paths   ["test"]}]
+  :watch?          false}
